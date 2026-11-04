@@ -35,7 +35,7 @@ Khi shipper mở lại trang, trình duyệt gửi mã phiên còn hạn; máy c
 
 Em chạy **trang thử nghiệm cục bộ** với token giả `DEMO_ONLY_NO_LOGIN`, sau đó mở **F12 → Application → Cookies → localhost**. Ảnh chụp cho thấy Cookie `shipper_session` có thời hạn hết hạn, cột **HttpOnly** và **Secure** được đánh dấu, `SameSite` là `Lax`. Trên trang, `document.cookie` không đọc được Cookie phiên. Em đã tải lại trang và Cookie vẫn xuất hiện trong F12.
 
-![Ảnh F12 của trang thử nghiệm Cookie](F12_Cookie_MinhHoa.png)
+![Ảnh F12 của trang thử nghiệm Cookie](assets/F12_Cookie_MinhHoa.png)
 
 Ảnh này chỉ minh họa cơ chế Cookie; em không có hệ thống vận tải thật để kiểm tra đăng nhập hoặc giỏ hàng. Trang thử nghiệm chạy trên `localhost`, nơi trình duyệt có ngoại lệ cho Cookie `Secure`; khi đưa ứng dụng lên Internet phải dùng **HTTPS**.
 
